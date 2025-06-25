@@ -1,8 +1,8 @@
-# What is it?
+## What is it?
 
 **Replacer** allows you to replace specific keyboard input in real time.
 
-# Quick start
+## Quick start
 
 Follow these few steps after building or downloading this application to set everything up.
 
@@ -18,10 +18,16 @@ trigger_word_2 : replace_word_2
 
 Now you can type (for this example) `trigger_word_1` and after pressing `Space` it will be automatically replaced to `replace_word_1` (as specified in YAML earlier).
 
-# How to build
+## How to build
 
 In the `Replacer` directory (same one where `replacer.py` located), execute:
 
-`pyinstaller -y -w --add-data "src/replace.png:." --add-data "src/rules.yaml:." --add-data "src/replace.ico:." --icon=replace.ico replacer.py`
+`pyinstaller -y -w --add-data "src/replace.png:." --add-data "src/rules.yaml:." --add-data "src/replace.ico:." --icon=src/replace.ico replacer.py`
 
 The results are available in `dist` folder.
+
+___
+
+## Credits
+
+Icon : https://tabler.io/icons
