@@ -6,7 +6,7 @@ import threading
 from PIL import Image
 
 BASE_DIR = path.dirname(path.abspath(__file__))
-RULE_LOC = path.join(BASE_DIR, "rules.yaml")
+RULE_LOC = path.join(BASE_DIR, "src", "rules.yaml")
 
 
 def set_keyboard_listener():
@@ -23,7 +23,7 @@ def set_keyboard_listener():
 def set_tray_icon():
     icon = tray.Icon(
         "Symbol Replacer",
-        Image.open(path.join(BASE_DIR, "replace.png")),
+        Image.open(path.join(BASE_DIR, "src", "replace.png")),
         "Symbol Replacer",
         tray.Menu(
             tray.Menu.SEPARATOR,  # does nothing, moves PyCharm hint
