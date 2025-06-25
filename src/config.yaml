@@ -1,0 +1,9 @@
+# Change values but do not remove keys!
+
+# if you're having problems with replacing the first word
+# try a higher value. 0.01-0.05 is recommended.
+Delay : 0.05
+
+# Maximum number of seconds between typed characters before
+# the current word is discarded. Defaults to 2 seconds.
+Timeout : 2

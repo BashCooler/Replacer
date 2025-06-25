@@ -18,13 +18,22 @@ trigger_word_2 : replace_word_2
 
 Now you can type (for this example) `trigger_word_1` and after pressing `Space` it will be automatically replaced to `replace_word_1` (as specified in YAML earlier).
 
+## Configuration
+
+You can configure these parameters in `src/config.yaml`:
+
+- **Delay** – if you're having issues replacing the first word in string, try a higher `Delay` value
+- **Timeout** – maximum number of seconds between typed characters before the current word is discarded
+
 ## How to build
 
 In the `Replacer` directory (same one where `replacer.py` located), execute:
 
-`pyinstaller -y -w --add-data "src/replace.png:." --add-data "src/rules.yaml:." --add-data "src/replace.ico:." --icon=src/replace.ico replacer.py`
+```
+pyinstaller -y -w --add-data "src/replace.png:src" --add-data "src/rules.yaml:src" --add-data "src/replace.ico:src" --add-data "src/config.yaml:src"  --icon=src/replace.ico replacer.py
+```
 
-The results are available in `dist` folder.
+The results will be available in `dist` folder.
 
 ___
 
