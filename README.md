@@ -30,7 +30,7 @@ You can configure these parameters in `src/config.yaml`:
 In the `Replacer` directory (same one where `replacer.py` located), execute:
 
 ```
-pyinstaller -y -w --add-data "src/replace.png:src" --add-data "src/rules.yaml:src" --add-data "src/replace.ico:src" --add-data "src/config.yaml:src"  --icon=src/replace.ico replacer.py
+pyinstaller -y -w --add-data "src/replace.png:src" --add-data "src/rules.yaml:src" --add-data "src/replace.ico:src" --add-data "src/config.yaml:src"  --icon=src/replace.ico --hidden-import=win32timezone --hidden-import=plyer.platforms.win.notification replacer.py
 ```
 
 The results will be available in `dist` folder.

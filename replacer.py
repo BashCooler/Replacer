@@ -6,6 +6,7 @@ import pystray as tray
 import threading
 import functools
 from PIL import Image
+from plyer import notification
 
 BASE_DIR = path.dirname(path.abspath(__file__))
 RULE_LOC = path.join(BASE_DIR, "src", "rules.yaml")
@@ -42,6 +43,12 @@ def set_keyboard_listener():
 
 
 def set_tray_icon():
+    notification.notify(
+        title="replacer",
+        message="The app is running",
+        app_icon=path.join(BASE_DIR, "src", "replace.ico"),
+        timeout=3
+    )
     icon = tray.Icon(
         "Symbol Replacer",
         Image.open(path.join(BASE_DIR, "src", "replace.png")),
